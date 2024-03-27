@@ -15,4 +15,5 @@ dill
 dataclasses
 ipython-sql
 sqlalchemy
-piplite
+ipywidgets
+tqdm
