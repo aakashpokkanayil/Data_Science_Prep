@@ -63,8 +63,44 @@ SELECT MAX(1,3,4) -- return error
 
    --select * from customer where last_name between 'Brooks' and 'Gray'
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- In this MySQL challenge, your query should determine the company's hierarchical structure based on the Position and ReportsTo columns.
+-- The output should include the Position of the individual, their FirstName and LastName, and the Position of the person they report to.
+-- Exclude entries where ReportsTo is null.
+-- The result should be ordered by the Position of the person they report to and then by the individual's Position in ascending alphabetical order.
+-- The expected columns in the output are: Position, FirstName, LastName, and ReportsToPosition.
+
+--CREATE TABLE Employees (
+--    EmployeeID INT PRIMARY KEY,
+--    FirstName NVARCHAR(50),
+--    LastName NVARCHAR(50),
+--    Position NVARCHAR(100),
+--    ReportsTo INT
+--);
 
 
+--INSERT INTO Employees (EmployeeID, FirstName, LastName, Position, ReportsTo) VALUES
+--(1, 'John', 'Doe', 'CEO', NULL),
+--(2, 'Jane', 'Smith', 'CFO', 1),
+--(3, 'Emily', 'Jones', 'CTO', 1),
+--(4, 'Michael', 'Brown', 'VP of Sales', 2),
+--(5, 'Sarah', 'Davis', 'VP of Marketing', 2),
+--(6, 'James', 'Wilson', 'Sales Manager', 4),
+--(7, 'Jessica', 'Garcia', 'Marketing Manager', 5),
+--(8, 'William', 'Martinez', 'Lead Developer', 3),
+--(9, 'David', 'Anderson', 'Senior Developer', 8),
+--(10, 'Linda', 'Thomas', 'Product Manager', 3);
+
+
+select
+Position,
+FirstName,
+LastName,
+ReportsTo as ReportsToPosition
+from Employees
+where reportsto is not null
+order by reportsto,position
 
 
 
