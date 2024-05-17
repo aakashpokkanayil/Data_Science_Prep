@@ -1,0 +1,17 @@
+
+Company X Problem:
+
+
+Company X relies upon telemarketing to sell products. 
+
+1. The Sales head of the company has hired you to conduct in-depth exploratory analyses of the historical data. 
+The objective of the assignment is to identify sales patterns using all possible combinations of the available fields and implement learnings to drive overall sales (Revenue)
+
+
+2. Your project lead wants to utilize the opportunity and prepare a business development case.
+The lead has asked you to explore different available techniques based on the data insights and prepare a few slides on the technique that can be implemented in the business. 
+The lead has also requested you to prepare the objective of the model with a reasonable explanation and also to list additional data requirements to describe the model- including steps and possible impact on the business.
+
+
+The column headers are self-explanatory, with the 'Sale' column indicating whether a sale was made or not when X called the customer.
+
