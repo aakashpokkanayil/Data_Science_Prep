@@ -162,3 +162,7 @@ select 12124+13859+3405+1062
 
 	select * from Book1 where Company_Name='C02849'
 
+	select  Analyst_Note,count(Analyst_Note)
+	from Book1 group by Analyst_Note
+	order by count(Analyst_Note) desc
+

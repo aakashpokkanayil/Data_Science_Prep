@@ -64,7 +64,12 @@
 --drop constraint FK__tbl_custo__posta__6383C8BA
 
 --alter table tbl_customer 
---drop column postal_code
+--drop column postal_code  # postal code is unique for customer, its based on orders. same customer have multiple postal code.
 
 --alter table tbl_orders
 --add  postal_code int foreign key references tbl_address(postal_code)
+
+
+
+
+

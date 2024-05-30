@@ -178,10 +178,33 @@
 
 		Get_Customer_Orders 'BH-11710'
 
+		select * from tbl_customer where customer_id='BH-11710'
+
 
 		-- this sp will provide a total over view of a customer.
 		-- total amount , avg amount,total orders of each order day.
 		-- we can also identify how often customer purchases. so we can identify frequent customers.
 
 
-	
+	create table sal
+	(
+	name varchar(50),
+	salary int
+	)
+
+	insert into sal
+	values
+	('gg',1500008),
+	('hh',1000007)
+
+	with cte
+	as
+	(
+	select name,
+	salary,
+	rank() over(order by salary desc) as rnk
+	from sal
+	--order by rnk
+	)
+	select * from cte where rnk=2
+
